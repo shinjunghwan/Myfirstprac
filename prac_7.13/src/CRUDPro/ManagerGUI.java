@@ -1,16 +1,9 @@
-package mybatis;
+package CRUDPro;
 
 import java.awt.*;
 import java.awt.List;
 import java.awt.event.*;
-import java.io.IOException;
-import java.io.Reader;
 import java.util.*;
-
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.mybatis.domain.MemberDTO;
 
 
 public class ManagerGUI {
@@ -197,6 +190,7 @@ public class ManagerGUI {
 				cbMale.setState(true);
 			}
 			//
+			
 			displayAll();
 			dto.setHighlight("");
 		}
@@ -278,7 +272,7 @@ public class ManagerGUI {
 		// TODO Auto-generated method stub
 		list.removeAll();
 		MemberDAO dao = new MemberDAO();
-		ArrayList<MemberDTO> allData = (ArrayList<MemberDTO>) dao.select();
+		ArrayList<MemberDTO> allData = dao.select();
 		for(MemberDTO dto : allData) {
 			String name = dto.getName();
 			int age = dto.getAge();

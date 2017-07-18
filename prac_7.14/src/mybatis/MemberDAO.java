@@ -52,6 +52,7 @@ public class MemberDAO {
 			member.setSex(sex.charAt(0));
 			sqlSession.insert("org.mybatis.persistence.Membermanage.insert",member);
 			sqlSession.commit();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			sqlSession.rollback();
