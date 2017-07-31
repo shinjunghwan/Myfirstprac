@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.mybatis.persistence.Membermanage">
+
+	<resultMap id="MemberResultMap" type="member">
+		<id column ="name" property="name"/>
+		<result column="age" property="age"/>
+		<result column="height" property="height"/>
+		<result column="weight" property="weight"/>
+		<result column="sex" property="sex"/>
+	</resultMap>
+	
+	<!--목록 조회 매핑 구문  -->
+	<select id="select" parameterType ="member" resultType="member">
+		SELECT name,age,height,weight,sex
+		from member1 
+		WHERE name = #{name}
+	</select>
+	
+	<insert id="insert" parameterType="member">
+		INSERT INTO member1 (name,age,height,weight,sex)
+		VALUES (#{name}, #{age}, #{height}, #{weight}, #{sex})
+	</insert>
+	
+	<update id="update" parameterType="member">
+		UPDATE member1
+		SET age = #{age}, height = #{height}, weight = #{weight}, sex = #{sex}
+		WHERE name = #{name}
+	</update>
+	
+	<delete id="delete" parameterType="member">
+		DELETE member1
+		WHERE name = #{name}
+	</delete>
+	
+	<select id="list" resultMap="MemberResultMap">
+		SELECT name,age,height,weight,sex
+		from member1 
+	</select>
+	
+</mapper>
