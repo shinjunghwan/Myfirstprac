@@ -21,7 +21,7 @@ public class UpdateProcAction implements Action {
 		dto.setPwd(request.getParameter("pwd"));
 		dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
-		
+		dto.setFile(request.getParameter("file"));
 		int re = BoardDAO.getInstance().updateBoard(dto);
 		
 		if (re == 1)

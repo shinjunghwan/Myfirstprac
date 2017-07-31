@@ -19,11 +19,12 @@ public class ReplyProcAction implements Action {
 		String pwd = request.getParameter("pwd");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		String file = request.getParameter("file");
 		int parent = Integer.parseInt(request.getParameter("parent"));
-		int sort = Integer.parseInt(request.getParameter("sort")); // parent 에서의 정렬
-		int tab = Integer.parseInt(request.getParameter("tab")); // 들여쓰기
+		int sort = Integer.parseInt(request.getParameter("sort")); // parent �뿉�꽌�쓽 �젙�젹
+		int tab = Integer.parseInt(request.getParameter("tab")); // �뱾�뿬�벐湲�
 		
-		BoardDTO dto = new BoardDTO(0, id, pwd, title, content, null, 0, parent, sort, tab);
+		BoardDTO dto = new BoardDTO(0, id, pwd, title, content, null, 0, parent, sort, tab, file);
 		BoardDAO dao = BoardDAO.getInstance();
 		
 		dao.updateReplySort(dto);
@@ -31,7 +32,7 @@ public class ReplyProcAction implements Action {
 		sort++;
 		tab++;
 		
-		BoardDTO dto2 = new BoardDTO(0, id, pwd, title, content, null, 0, parent, sort, tab);
+		BoardDTO dto2 = new BoardDTO(0, id, pwd, title, content, null, 0, parent, sort, tab, file);
 		
 		int insertRe = dao.insertReply(dto2);
 		

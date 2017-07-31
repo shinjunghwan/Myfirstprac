@@ -16,6 +16,7 @@ public class BoardDTO {
 	private int sort; // �떟湲� �젙�젹 踰덊샇
 	private int tab; // �뱾�뿬 �벐湲�
 	private String file;
+	private int hitrank;
 	
 	public BoardDTO() {
 		super();
@@ -50,6 +51,14 @@ public class BoardDTO {
 		this.file = file;
 	}
 
+	public int getHitrank() {
+		return hitrank;
+	}
+
+	public void setHitrank(int hitrank) {
+		this.hitrank = hitrank;
+	}
+	
 	public String getFile() {
 		return file;
 	}

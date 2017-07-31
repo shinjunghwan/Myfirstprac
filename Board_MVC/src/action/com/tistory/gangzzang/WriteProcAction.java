@@ -19,8 +19,8 @@ public class WriteProcAction implements Action {
 		String pwd = request.getParameter("pwd");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		
-		BoardDTO dto = new BoardDTO(0, id, pwd, title, content, null, 0, 0, 0, 0);
+		String file = request.getParameter("file");
+		BoardDTO dto = new BoardDTO(0, id, pwd, title, content, null, 0, 0, 0, 0, file);
 		int re = BoardDAO.getInstance().insertBoard(dto);
 		
 		if (re == 1)

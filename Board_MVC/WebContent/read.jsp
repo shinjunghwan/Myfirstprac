@@ -31,6 +31,12 @@
 			<td colspan="3">	<textarea rows="20" cols="82" name="content" disabled="disabled">${ dto.content }</textarea></td>
 		</tr>
 		<tr>
+				<th class="read">파일첨부</th>
+				<td colspan="3">
+					<input type="file" name="file" maxlength="200" size="59" >
+				</td>
+			</tr>
+		<tr>
 			<td colspan="3" align="right">
 				<a href="reply.do?no=${ dto.no }&pg=${ pg }"><button class="linkbutton">답글쓰기</button></a>
 				<a href="update.do?no=${ dto.no }&pg=${ pg }"><button class="linkbutton">수정하기</button></a>

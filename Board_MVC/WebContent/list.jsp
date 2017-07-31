@@ -31,7 +31,9 @@
 							</c:forEach>
 							☞
 						</c:if>
-						<a href="read.do?no=${ b.no }&pg=${ pg }">&nbsp;${ b.title }</a></td>
+						<a href="read.do?no=${ b.no }&pg=${ pg }">&nbsp;${ b.title }</a>
+						<c:if test="${ b.hitrank < 6 }"><h6>HOT</h6></c:if>
+					</td>
 					<td class="left">&nbsp;${ b.id }</td>
 					<td class="center">${ b.regdate }</td>
 					<td class="center">${ b.hit }</td>

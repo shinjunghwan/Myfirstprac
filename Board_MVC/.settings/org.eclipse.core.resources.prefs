@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/action/com/tistory/gangzzang/ListAction.java=UTF-8
+encoding//src/action/com/tistory/gangzzang/ReplyProcAction.java=UTF-8
+encoding//src/model/com/tistory/gangzzang/BoardDAO.java=UTF-8
 encoding//src/model/com/tistory/gangzzang/BoardDTO.java=UTF-8
 encoding//src/model/com/tistory/gangzzang/UtillDB.java=UTF-8

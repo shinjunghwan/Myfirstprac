@@ -48,7 +48,7 @@
 			<tr>
 				<th>제목</th>
 				<td>
-					&nbsp;<input type="text" name="title" maxlength="100" size="59" value="[RE] ${ dto.title }">
+					&nbsp;<input type="text" name="title" maxlength="100" size="59" value="[RE] ${ dto.title }" disabled="disabled">
 				</td>
 			</tr>
 			<tr>
